@@ -12,8 +12,9 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 var Person = /** @class */ (function () {
-    function Person(theName) {
+    function Person(theName, theAge) {
         this.name = theName;
+        this.age = theAge;
     }
     Person.prototype.introduceSelf = function () {
         console.log("Hola, soy " + this.name + " y soy de rancho.");
@@ -25,16 +26,19 @@ derivada siempre debe invocar al constructor de la clase
 base con una llamada a super()*/
 var Friend = /** @class */ (function (_super) {
     __extends(Friend, _super);
-    function Friend(name, yearsKnow) {
-        var _this = _super.call(this, name) || this;
+    function Friend(name, age, yearsKnow) {
+        var _this = _super.call(this, name, age) || this;
         _this.yearsKnow = yearsKnow;
         return _this;
     }
     Friend.prototype.timeKnow = function () {
         console.log("We have been friends for " + this.yearsKnow + " years.");
     };
+    Friend.prototype.friendSince = function () {
+        var firstAge = this.age - this.yearsKnow;
+        console.log("Hemos sido amigos desde que ten\u00EDa " + firstAge + " de edad.");
+    };
     return Friend;
 }(Person));
-var amigo1 = new Friend("Elizalde", 6);
-amigo1.introduceSelf();
-amigo1.timeKnow();
+var amigo1 = new Friend("Elizalde", 19, 8);
+amigo1.friendSince();

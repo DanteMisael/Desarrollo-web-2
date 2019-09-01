@@ -11,3 +11,8 @@ console.log(array[0]);
 
 [x, y, z] = array;
 console.log(x);
+
+//Destructuración de arrays con estructuración
+let array2 = [1,2,3,4];
+var [x,y, ...rest] = array2;
+console.log(x,y,rest);

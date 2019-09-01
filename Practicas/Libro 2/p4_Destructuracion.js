@@ -8,3 +8,7 @@ var array = [4, 5, 6];
 console.log(array[0]);
 x = array[0], y = array[1], z = array[2];
 console.log(x);
+//Destructuración de arrays con estructuración
+var array2 = [1, 2, 3, 4];
+var x = array2[0], y = array2[1], rest = array2.slice(2);
+console.log(x, y, rest);

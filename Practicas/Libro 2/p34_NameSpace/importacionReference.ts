@@ -1,0 +1,1 @@
+console.log(MySpace.MyClass.myProperty);
